@@ -31,4 +31,5 @@
 @property (nonatomic, assign) float posX;
 @property (nonatomic, assign) float posY;
 @property (nonatomic, assign) int positionType;
+@property (nonatomic, assign) BOOL isLocked;
 @end

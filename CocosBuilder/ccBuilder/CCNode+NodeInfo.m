@@ -781,4 +781,14 @@
     return [[self extraPropForKey:@"usesFlashSkew"] boolValue];
 }
 
+- (BOOL) isLocked
+{
+	return [[self extraPropForKey:@"isLocked"] boolValue];
+}
+	
+- (void) setIsLocked: (BOOL)isLocked
+{
+    [self setExtraProp:[NSNumber numberWithBool:isLocked] forKey:@"isLocked"];
+}
+
 @end

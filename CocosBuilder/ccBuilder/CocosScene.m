@@ -716,6 +716,11 @@ static CocosScene* sharedCocosScene;
     if (currentMouseTransform == kCCBTransformHandleDownInside)
     {
         CCNode* clickedNode = [nodesAtSelectionPt objectAtIndex:currentNodeAtSelectionPtIdx];
+		
+		if (clickedNode.isLocked)
+		{
+			return YES;
+		}
         
         BOOL selectedNodeUnderClickPt = NO;
         for (CCNode* selectedNode in appDelegate.selectedNodes)
@@ -1009,6 +1014,11 @@ static CocosScene* sharedCocosScene;
     {
         CCNode* clickedNode = [nodesAtSelectionPt objectAtIndex:currentNodeAtSelectionPtIdx];
         
+		if (clickedNode.isLocked)
+		{
+			return YES;
+		}
+
         if ([event modifierFlags] & NSShiftKeyMask)
         {
             // Add to/subtract from selection

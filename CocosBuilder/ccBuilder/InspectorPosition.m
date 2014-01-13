@@ -121,6 +121,16 @@
     return [PositionPropertySetter positionTypeForNode:selection prop:propertyName];
 }
 
+- (BOOL) isLocked
+{
+	return selection.isLocked;
+}
+
+- (void) setIsLocked: (BOOL)isLocked
+{
+	selection.isLocked = isLocked;
+}
+	
 - (void) refresh
 {
     [self willChangeValueForKey:@"posX"];

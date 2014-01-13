@@ -36,6 +36,7 @@
     NSMutableArray* customProperties;
     CGPoint transformStartPosition;
     NSString* displayName;
+	BOOL isLocked;
 }
 
 @property (nonatomic,assign) PlugInNode* plugIn;
@@ -45,6 +46,7 @@
 @property (nonatomic,copy) NSString* displayName;
 @property (nonatomic,retain) NSMutableArray* customProperties;
 @property (nonatomic,assign) CGPoint transformStartPosition;
+@property (nonatomic,assign) BOOL isLocked;
 
 + (id) nodeInfoWithPlugIn:(PlugInNode*)pin;
 

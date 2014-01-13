@@ -34,6 +34,7 @@
 @synthesize displayName;
 @synthesize customProperties;
 @synthesize transformStartPosition;
+@synthesize isLocked;
 
 + (id) nodeInfoWithPlugIn:(PlugInNode*)pin
 {
